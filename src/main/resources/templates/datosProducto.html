@@ -28,6 +28,18 @@
 				        	<input type="text" th:field="*{modelo}" class="col-6" disabled/>
 				        </div>
 				        <div>
+				        	<label class="col-4">Carga Máx. (Kg)</label>
+				        	<input type="text" th:field="*{carga}" class="col-6" disabled/>
+				        </div>
+				        <div>
+				        	<label class="col-4">Personas Máx.</label>
+				        	<input type="text" th:field="*{personas}" class="col-6" disabled/>
+				        </div>
+				        <div>
+				        	<label class="col-4">Paradas</label>
+				        	<input type="number" th:field="*{paradas}" class="col-6" disabled/>
+				        </div>
+				        <div>
 				        	<label class="col-4">Fecha Instalacion</label>
 				        	<input type="date" th:field="*{fechaInstal}" class="col-6" disabled/>
 				        </div>
@@ -228,6 +240,12 @@
 				        <div>
 				       		<label class="col-4">Descripción</label>
 				        	<textarea type="text" th:field="*{cablesTraccion.descrip}" class="col-6" style="font-size: small; vertical-align: top;" disabled></textarea>
+				        </div>
+				        <hr>
+				        <p style="font-size: large;"><strong>Documentación</strong></p>
+         				<div>
+				       		<label class="col-4">Documento (Enlace Drive)<label style="color: red"></label></label>
+				        	<input type="text" th:field="*{doc}" class="col-6" disabled/>
 				        </div>
          				<br>
 					</div>

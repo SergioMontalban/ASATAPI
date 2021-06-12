@@ -13,6 +13,9 @@ public class ProductModel {
 	@Id
 	private String id; //Puede contener números y letras
 	private String modelo;
+	private Integer carga;
+	private Integer personas;
+	private Integer paradas;
 	private String fechaInstal;
 	//*****Info. Cliente********
 	private String numPedidoCli;
@@ -36,19 +39,23 @@ public class ProductModel {
 	private ElementCant cablesTraccion;
 	
 	//Documentación
-	//private List<String> documentación;
+	private String doc;
 	
 	public ProductModel() {
 		super();
 	}
-	
-	public ProductModel(String id, String modelo, String fechaInstal, String numPedidoCli, String numRefCli,
-			String nombreCli, String direccionCli, String tlfnCli, Element cabina, ElementCant puertaCabina,
-			ElementCant puertaPiso, Element maniobra, Element botoneras, Element motor, Element chasisCabina,
-			Element chasisContrapeso, Element guiasCabina, Element guiasContrapeso, ElementCant cablesTraccion) {
+
+	public ProductModel(String id, String modelo, Integer carga, Integer personas, Integer paradas, String fechaInstal,
+			String numPedidoCli, String numRefCli, String nombreCli, String direccionCli, String tlfnCli,
+			Element cabina, ElementCant puertaCabina, ElementCant puertaPiso, Element maniobra, Element botoneras,
+			Element motor, Element chasisCabina, Element chasisContrapeso, Element guiasCabina, Element guiasContrapeso,
+			ElementCant cablesTraccion, String doc) {
 		super();
 		this.id = id;
 		this.modelo = modelo;
+		this.carga = carga;
+		this.personas = personas;
+		this.paradas = paradas;
 		this.fechaInstal = fechaInstal;
 		this.numPedidoCli = numPedidoCli;
 		this.numRefCli = numRefCli;
@@ -66,6 +73,7 @@ public class ProductModel {
 		this.guiasCabina = guiasCabina;
 		this.guiasContrapeso = guiasContrapeso;
 		this.cablesTraccion = cablesTraccion;
+		this.doc = doc;
 	}
 
 	public String getId() {
@@ -220,14 +228,38 @@ public class ProductModel {
 		this.cablesTraccion = cablesTraccion;
 	}
 
-	@Override
-	public String toString() {
-		return "ProductModel [id=" + id + ", modelo=" + modelo + ", fechaInstal=" + fechaInstal + ", numPedidoCli="
-				+ numPedidoCli + ", numRefCli=" + numRefCli + ", nombreCli=" + nombreCli + ", direccionCli="
-				+ direccionCli + ", tlfnCli=" + tlfnCli + ", cabina=" + cabina + ", puertaCabina=" + puertaCabina
-				+ ", puertaPiso=" + puertaPiso + ", maniobra=" + maniobra + ", botoneras=" + botoneras + ", motor="
-				+ motor + ", chasisCabina=" + chasisCabina + ", chasisContrapeso=" + chasisContrapeso + ", guiasCabina="
-				+ guiasCabina + ", guiasContrapeso=" + guiasContrapeso + ", cablesTraccion=" + cablesTraccion + "]";
+	public String getDoc() {
+		return doc;
 	}
+
+	public void setDoc(String doc) {
+		this.doc = doc;
+	}
+
+	public Integer getPersonas() {
+		return personas;
+	}
+
+	public void setPersonas(Integer personas) {
+		this.personas = personas;
+	}
+
+	public Integer getParadas() {
+		return paradas;
+	}
+
+	public void setParadas(Integer paradas) {
+		this.paradas = paradas;
+	}
+
+	public Integer getCarga() {
+		return carga;
+	}
+
+	public void setCarga(Integer carga) {
+		this.carga = carga;
+	}
+
+	
 
 }
